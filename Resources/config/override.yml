@@ -1,0 +1,4 @@
+system:
+    default:
+        field_templates:
+            - template: MakingWaveseZAddThisBundle:Default:addthis_field_template.html.twig

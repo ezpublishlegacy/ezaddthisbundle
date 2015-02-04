@@ -1,0 +1,12 @@
+{# Input fields: field.value.media_tags - array of social media tags,
+                 parameters.url - url to page for exporting (typically current page) #}
+{% block addthis_field %}
+{%  spaceless %}
+    <div class="addthis_toolbox addthis_32x32_style addthis_default_style" >
+        {% for tag in field.value.media_tags %}
+            <a class="addthis_button_{{ tag }}" addthis:url="{{ parameters.url }}" ></a>
+        {% endfor %}
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js"></script>
+{%  endspaceless %}
+{% endblock %}

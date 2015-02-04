@@ -1,0 +1,15 @@
+parameters:
+    makingwaves.ezaddthisbundle.fieldType.addthis.class: MakingWaves\eZAddThisBundle\eZ\Publish\FieldType\AddThis\Type
+    makingwaves.ezaddthisbundle.fieldType.addthis.converter.class: MakingWaves\eZAddThisBundle\eZ\Publish\FieldType\AddThis\LegacyConverter
+
+services:
+    makingwaves.ezaddthisbundle.fieldType.addthis:
+        parent: ezpublish.fieldType
+        class: %makingwaves.ezaddthisbundle.fieldType.addthis.class%
+        tags:
+            - {name: ezpublish.fieldType, alias: addthis}
+
+    makingwaves.ezaddthisbundle.fieldType.ezsrrating.converter:
+        class: %makingwaves.ezaddthisbundle.fieldType.addthis.converter.class%
+        tags:
+            - {name: ezpublish.storageEngine.legacy.converter, alias: addthis}

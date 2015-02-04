@@ -1,0 +1,21 @@
+{
+    "name": "makingwaves/ezaddthisbundle",
+    "description": "eZ Add This Bundle for eZ Publish Platform, integration with addthis.com",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Making Waves",
+            "homepage": "https://github.com/makingwaves/ezaddthisbundle"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "ezsystems/ezpublish-kernel": ">=5.3|>=2014.03",
+        "makingwaves/ezaddthis": ">=5.3|>=2014.03"
+    },
+    "autoload": {
+        "psr-0": {"MakingWaves\\eZAddThisBundle": ""}
+    },
+    "target-dir": "MakingWaves/eZAddThisBundle"
+}
